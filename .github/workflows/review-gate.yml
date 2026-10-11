@@ -1,0 +1,16 @@
+name: review-gate
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Adversarial review gate (placeholder)
+        run: |
+          echo "Review gate: exige aprovação humana (merge gate)."
+          echo "Este workflow serve como lembrete/gancho para revisão adversarial (L3)."
+          echo "Em PRs com caminho crítico/needs_review, o revisor L3 deve aprovar antes do merge humano."

@@ -1,0 +1,29 @@
+name: sync-agents-md
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'AGENTS.md'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync AGENTS.md to template
+        run: |
+          cp AGENTS.md templates/project/AGENTS.md
+      - name: Create PR if changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'chore: sync AGENTS.md to template'
+          title: 'chore: sync AGENTS.md to template'
+          body: 'Auto-sync AGENTS.md (canonical) to templates/project/AGENTS.md'
+          branch: chore/sync-agents-md
+          delete-branch: true
+          labels: sync:agents-md
+          add-paths: templates/project/AGENTS.md

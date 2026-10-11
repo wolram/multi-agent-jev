@@ -1,0 +1,1 @@
+/Users/marlowsousa/Documents/multi-agent-jev/target/debug/libagents.rlib: /Users/marlowsousa/Documents/multi-agent-jev/crates/agents/src/contracts.rs /Users/marlowsousa/Documents/multi-agent-jev/crates/agents/src/error.rs /Users/marlowsousa/Documents/multi-agent-jev/crates/agents/src/lib.rs

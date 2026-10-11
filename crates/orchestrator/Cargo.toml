@@ -1,0 +1,13 @@
+[package]
+name = "orchestrator"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Orchestrates flow L1→L4 with worktrees and state transitions"
+
+[dependencies]
+agents = { path = "../agents" }
+jev-core = { path = "../jev-core" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
